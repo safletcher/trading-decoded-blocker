@@ -34,6 +34,7 @@ Second level exception dependencies
 class UtilException(BlockerToolsExceptions):
     ...
 
+
 class NullArgumentsNotAllowed(BlockerToolsExceptions):
     ...
 

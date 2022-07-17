@@ -1,15 +1,7 @@
-from discord import Member
-from dataclasses import dataclass
-from discord.ext.commands import Bot
-
-@dataclass
-class GetMemberReferenceArgs:
-    display_name: Member.diplay_name
-    bot: Bot
-    guildId: int
-    channelId: int
+from bantools.repositories.discord import DiscordChannelRepository
 
 
-def get_member_reference_in_channel(memberRefArgs : GetMemberReferenceArgs):
+def get_member_reference_in_channel(
+    member_name: str, discord_repo: DiscordChannelRepository
+):
     pass
-
