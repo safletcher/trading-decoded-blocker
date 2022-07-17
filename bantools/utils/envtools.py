@@ -2,7 +2,28 @@ import os
 from bantools.exceptions import EnvironmentVariableUnavaiable, NullArgumentsNotAllowed
 
 
-def getenv_variable(variable_name: str, case_insensitive: bool = True) -> str:
+def getenv_variable(variable_name: str) -> str:
+    """
+    Parameters
+    ----------
+    variable_name : str
+        The environment variable we want to retrieve
+
+    Returns
+    -------
+    str
+        Returns the value of envrionment named by variable_name.
+
+    Raises
+    ------
+    NullArgumentsNotAllowed
+        If user passes None for variable name argument this exception will be raised
+
+    EnvironmentVariableUnavaiable
+        if environment variable does not exist then throw this exception
+
+
+    """
 
     if variable_name is None:
         raise NullArgumentsNotAllowed("A None arguement was passed to variable_name")
