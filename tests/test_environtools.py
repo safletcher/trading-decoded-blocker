@@ -3,10 +3,7 @@ import pytest
 from unittest import TestCase
 from bantools.utils.environ_tools import getenv_var
 from unittest import TestCase
-from bantools.utils.exceptions import (
-    NullArgumentsNotAllowed,
-    EnvironmentVariableUnavaiable,
-)
+from bantools.exceptions import NullArgumentsNotAllowed, EnvironmentVariableUnavaiable
 
 
 class TestEnvironment(TestCase):

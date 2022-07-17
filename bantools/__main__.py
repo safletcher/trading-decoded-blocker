@@ -1,6 +1,6 @@
 from discord.ext.commands import Bot
-from bantools.listeners import DiscordChannelListener
-from bantools.utils.environ_tools import getenv_var
+from listeners import DiscordChannelListener
+from utils.environ_tools import getenv_var
 
 
 def main():
@@ -11,7 +11,8 @@ def main():
 
     discord_api_key = getenv_var("API_KEY")
 
-    bantools.run()
+    print(f"discord_api_key = {discord_api_key}")
+    # bantools.run()
 
 
 if __name__ == "__main__":
