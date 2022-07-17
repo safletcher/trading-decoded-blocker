@@ -1,18 +1,14 @@
 from discord.ext.commands import Bot
-from listeners import DiscordChannelListener
-from utils.environ_tools import getenv_var
+from bantools.use_cases.listeners import find_duplicate_users_usecase
+from bantools.utils.envtools import getenv_variable
 
 
 def main():
 
-    bantools = Bot(command_prefix="/")
-    listenerCog = DiscordChannelListener(bantools, "new-joiners")
-    bantools.add_cog(listenerCog)
+    banningTools = Bot(command_prefix="/")
+    banningTools.add_listener(find_duplicate_users_usecase, 'on_member_join')
+    banningTools.run(getenv_variable("API_KEY"))
 
-    discord_api_key = getenv_var("API_KEY")
-
-    print(f"discord_api_key = {discord_api_key}")
-    # bantools.run()
 
 
 if __name__ == "__main__":

@@ -1,9 +1,8 @@
 import os
-import typing
-from exceptions import EnvironmentVariableUnavaiable, NullArgumentsNotAllowed
+from bantools.exceptions import EnvironmentVariableUnavaiable, NullArgumentsNotAllowed
 
 
-def getenv_var(variable_name: str, case_insensitive: bool = True) -> str:
+def getenv_variable(variable_name: str, case_insensitive: bool = True) -> str:
 
     if variable_name is None:
         raise NullArgumentsNotAllowed("A None arguement was passed to variable_name")

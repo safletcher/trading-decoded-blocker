@@ -1,9 +1,8 @@
 import os
 import pytest
+from bantools import getenv_var
 from unittest import TestCase
-from bantools.utils.environ_tools import getenv_var
-from unittest import TestCase
-from bantools.exceptions import NullArgumentsNotAllowed, EnvironmentVariableUnavaiable
+from bantools import NullArgumentsNotAllowed, EnvironmentVariableUnavaiable
 
 
 class TestEnvironment(TestCase):
