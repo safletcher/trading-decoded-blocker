@@ -1,6 +1,6 @@
 {
     "version": "0.2.0",
-    "configurations": [
+    "configurations":
     {
             "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
@@ -12,4 +12,6 @@
                 "**/__pycache__": true
             }
     }, 
+
+    //... other settings, but I modified the "Current File" setting above ...
 }
