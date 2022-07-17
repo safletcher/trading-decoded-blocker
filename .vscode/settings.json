@@ -12,6 +12,4 @@
                 "**/__pycache__": true
             }
     }, 
-
-    //... other settings, but I modified the "Current File" setting above ...
 }
