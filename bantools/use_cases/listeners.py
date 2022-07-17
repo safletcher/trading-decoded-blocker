@@ -72,10 +72,10 @@ def usecase_did_user_already_signup(member: Member) -> None:
         messages
     )
 
-    signup_count = count_references_of_memeber(
+    signup_count: MemberReferenceCount = count_references_of_memeber(
         user_message_entries, member.display_name
     )
 
     if signup_count.count > 1:
-        message = messaging.offender_found(member.display_name)
+        message = messaging.offender_found(signup_count)
         warning_channel.send(message)

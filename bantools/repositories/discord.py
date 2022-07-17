@@ -26,7 +26,7 @@ def convert_to_generic_metric(message: Message) -> MessageContent:
         message.guild.id,
         message.channel.id,
         message.created_at,
-        message.jump_url
+        message.jump_url,
     )
 
 
